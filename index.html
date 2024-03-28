@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset=“UTF-8”>
+   <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+   <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willard's Top 10's</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+        }
+        .sidebar {
+            background-color: #07b5a1;
+            color: #fff;
+            width: 200px;
+            padding: 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+        .sidebar ul li.bold {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .welcome-heading {
+            margin-bottom: 20px;
+        }
+        .welcome-gif {
+            max-width: 100%;
+            height: auto;
+        }
+        .media-list {
+            display: none;
+        }
+        .media-list.active {
+            display: block;
+            margin-bottom: 20px;
+        }
+        .media-list ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .media-list ul li {
+            margin-bottom: 10px;
+        }
+        .media-details {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li class="bold">Favorite</li>
+            <li><a href="#" onclick="showCategory('movie')">Movies</a></li>
+            <li><a href="#" onclick="showCategory('show')">Shows</a></li>
+            <li><a href="#" onclick="showCategory('videoGame')">Video Games</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1 class="welcome-heading">Willard's Top 10's</h1>
+        <p>Select a form of media on the lefthand side to access my Top 10 List for that category</p>
+        <img src="NyanCat.gif" alt="Welcome GIF" class="welcome-gif">
+        <div class="media-list" id="movieList">
+            <ul>
+                <li><a href="#" onclick="showMovieDetails('Movie 1')">Movie 1</a></li>
+                <li><a href="#" onclick="showMovieDetails('Movie 2')">Movie 2</a></li>
+                <li><a href="#" onclick="showMovieDetails('Movie 3')">Movie 3</a></li>
+                <li><a href="#" onclick="showMovieDetails('Movie 4')">Movie 4</a></li>
+                <li><a href="#" onclick="showMovieDetails('Movie 5')">Movie 5</a></li>
+                <li><a href="#" onclick="showMovieDetails('Movie 6')">Movie 6</a></li>
+                <li><a href="#" onclick="showMovieDetails('Movie 7')">Movie 7</a></li>
+                <li><a href="#" onclick="showMovieDetails('Movie 8')">Movie 8</a></li>
+                <li><a href="#" onclick="showMovieDetails('Movie 9')">Movie 9</a></li>
+                <li><a href="#" onclick="showMovieDetails('Movie 10')">Movie 10</a></li>
+            </ul>
+        </div>
+        <div class="media-list" id="showList">
+            <ul>
+                <li><a href="#" onclick="showShowDetails('Show 1')">Show 1</a></li>
+                <li><a href="#" onclick="showShowDetails('Show 2')">Show 2</a></li>
+                <li><a href="#" onclick="showShowDetails('Show 3')">Show 3</a></li>
+                <li><a href="#" onclick="showShowDetails('Show 4')">Show 4</a></li>
+                <li><a href="#" onclick="showShowDetails('Show 5')">Show 5</a></li>
+                <li><a href="#" onclick="showShowDetails('Show 6')">Show 6</a></li>
+                <li><a href="#" onclick="showShowDetails('Show 7')">Show 7</a></li>
+                <li><a href="#" onclick="showShowDetails('Show 8')">Show 8</a></li>
+                <li><a href="#" onclick="showShowDetails('Show 9')">Show 9</a></li>
+                <li><a href="#" onclick="showShowDetails('Show 10')">Show 10</a></li>
+            </ul>
+        </div>
+        <div class="media-list" id="videoGameList">
+            <ul>
+                <li><a href="#" onclick="showVideoGameDetails('Video Game 1')">Video Game 1</a></li>
+                <li><a href="#" onclick="showVideoGameDetails('Video Game 2')">Video Game 2</a></li>
+                <li><a href="#" onclick="showVideoGameDetails('Video Game 3')">Video Game 3</a></li>
+                <li><a href="#" onclick="showVideoGameDetails('Video Game 4')">Video Game 4</a></li>
+                <li><a href="#" onclick="showVideoGameDetails('Video Game 5')">Video Game 5</a></li>
+                <li><a href="#" onclick="showVideoGameDetails('Video Game 6')">Video Game 6</a></li>
+                <li><a href="#" onclick="showVideoGameDetails('Video Game 7')">Video Game 7</a></li>
+                <li><a href="#" onclick="showVideoGameDetails('Video Game 8')">Video Game 8</a></li>
+                <li><a href="#" onclick="showVideoGameDetails('Video Game 9')">Video Game 9</a></li>
+                <li><a href="#" onclick="showVideoGameDetails('Video Game 10')">Video Game 10</a></li>
+            </ul>
+        </div>
+        <div class="media-details" id="mediaDetails">
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
